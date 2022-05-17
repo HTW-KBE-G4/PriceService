@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  priceservice:
+    container_name: price_service
+    build: .
+    image: price_service
+
+    ports:
+      - 4004:4004
