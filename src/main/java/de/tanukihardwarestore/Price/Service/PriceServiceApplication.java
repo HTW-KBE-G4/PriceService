@@ -18,11 +18,4 @@ public class PriceServiceApplication {
 		SpringApplication.run(PriceServiceApplication.class, args);
 	}
 
-	@PostMapping("/price")
-	public String convert(@RequestBody List<HardwareComponent> request) throws JsonProcessingException {
-		ObjectMapper objectMapper = new ObjectMapper();
-		double res = PriceCalculator.addPrices(request);
-		return objectMapper.writeValueAsString(new Result(res));
-	}
-
 }
