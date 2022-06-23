@@ -7,8 +7,7 @@ import java.util.List;
 
 public class PriceServer {
 
-    @RabbitListener(queues = "tanuki.currency.requests")
-    @SendTo("tanuki.currency.replies")
+    @RabbitListener(queues = "price")
     public Result receive(List<HardwareComponent> req) {
         double res = PriceCalculator.addPrices(req);
         return new Result(res);
