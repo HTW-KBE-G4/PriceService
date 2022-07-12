@@ -1,6 +1,8 @@
 package de.tanukihardwarestore.Price.Service;
 
-public class HardwareComponent {
+import java.io.Serializable;
+
+public class HardwareComponent implements Serializable {
 
     private float uvp;
 
