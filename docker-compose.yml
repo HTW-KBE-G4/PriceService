@@ -8,3 +8,14 @@ services:
 
     ports:
       - "4004:4004"
+
+    networks:
+      - default
+      - messagebrokerservice_default
+
+        
+networks:
+  default:
+    internal: true
+  messagebrokerservice_default:
+    external: true
